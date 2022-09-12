@@ -1,0 +1,691 @@
+
+header{
+    position: fixed;
+    background-color: #FFFFFF;
+    width: 100%;
+    z-index: 2;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+#projects{
+  position: absolute;
+  width: 145px;
+  height: 35px;
+  left: calc(50% - 72.5px);
+  top: 8px;
+  
+  font-family: 'ABeeZee';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  
+  color: #FFFFFF;
+  
+  text-decoration: none;
+}
+#about{
+  position: absolute;
+  width: 142px;
+  height: 35px;
+  left: calc(70% - 71px);
+  top: 8px;
+  
+  font-family: 'ABeeZee';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#home{
+  position: absolute;
+  width: 113px;
+  height: 35px;
+  left: calc(30% - 62.5px);
+  top: 8px;
+  
+  font-family: 'ABeeZee';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#whitenav{
+  position: absolute;
+  width: 100vw;
+  height: 53px;
+  left: 0px;
+  top: 0px;
+  
+  background: #8F8F8F;
+  box-shadow: 0px 5px 3px 4px rgba(0, 0, 0, 0.04);
+}
+#rectangle2{
+  position: absolute;
+  width: 50px;
+  height: 261px;
+  left: 1870px;
+  top: 209px;
+
+  background: #A5C9F3;  
+}
+#rectangle3{
+  position: absolute;
+width: 50px;
+height: 346px;
+left: 0px;
+top: 558px;
+
+background: #A6DBAE;
+}
+#bkimg{
+position: absolute;
+width: 100vw;
+height: 100vh;
+left: 0px;
+top: 0px;
+object-fit:cover;
+background-size:contain;
+max-width: 100%;
+max-height: 100vh;
+margin: auto;
+}
+#greeting{
+  position: absolute;
+  width: 156px;
+  height: 53px;
+  left: 42vw;
+  top: 243px;
+  
+  font-family: 'Abyssinica SIL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  
+  color: #FFFFFF;
+  
+}
+#bigname{
+  position: absolute;
+  width: 670px;
+  height: 140px;
+  left: 42vw;
+  top: 296px;
+  
+  font-family: 'Abyssinica SIL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 88px;
+  
+  color: #FFFFFF;  
+}
+#title{
+  position: absolute;
+width: 46vw;
+height: 151px;
+left: 42vw;
+top: 401px;
+
+font-family: 'Abyssinica SIL';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 45px;
+
+color: #FFFFFF;
+}
+#shadowBox{
+  position: absolute;
+  width: 50vw;
+  height: 408px;
+  left: 40vw;
+  top: 217px;
+  
+  background: rgba(0, 0, 0, 0.71);
+  opacity: 0.3;
+  filter: blur(4px);
+  border-radius: 41px;
+}
+#jumperProjects{
+  position: absolute;
+  left: 762px;
+  top: 100vh;
+}
+#jumperHome{
+  position: absolute;
+  top:0;
+}
+
+
+/*grayBoxes*/
+#grayBox1{
+  position: absolute;
+  width:20vw;
+  height:14.6vw;
+  left: 4vw;
+  top: calc(127vh);
+  
+  box-shadow: 0px 0px 11px 8px #AEECF4;
+  border-radius: 15px;
+}
+#grayBox2{
+  position: absolute;
+  width:20vw;
+  height:14.6vw;
+  left: 28vw;
+  top: 127vh;
+
+  box-shadow: 0px 0px 11px 8px #AEECF4;
+  border-radius: 15px;
+}
+#grayBox3{
+  position: absolute;
+  width:20vw;
+  height:14.6vw;
+  left: 52vw;
+  top: 127vh;
+  
+  box-shadow: 0px 0px 11px 8px #AEECF4;
+  border-radius: 15px;
+}
+#grayBox4{
+  position: absolute;
+  width:20vw;
+  height:14.6vw;
+  left: 76vw;
+  top: 127vh;
+  
+  box-shadow: 0px 0px 11px 8px #AEECF4;
+  border-radius: 15px;
+}
+#grayBox5{
+  position: absolute;
+  width: 20vw;
+  height: 14.6vw;
+  left: 4vw;
+  top: 162vh;
+  
+  box-shadow: 0px 0px 11px 8px #BCF4AE;
+  border-radius: 15px;
+}
+#grayBox6{
+  position: absolute;
+  width: 20vw;
+  height: 14.6vw;
+  left: 28vw;
+  top: 162vh;
+  
+  box-shadow: 0px 0px 11px 8px #BCF4AE;
+  border-radius: 15px;
+}
+#grayBox7{
+  position: absolute;
+  width: 20vw;
+  height: 14.6vw;
+left: 52vw;
+top: 162vh;
+
+box-shadow: 0px 0px 11px 8px #BCF4AE;
+border-radius: 15px;
+
+}
+#grayBox8{
+  position: absolute;
+  width: 20vw;
+  height: 14.6vw;
+  left: 76vw;
+  top: 162vh;
+  
+  box-shadow: 0px 0px 11px 8px #F4AEE5;
+  border-radius: 15px;
+}
+
+#grayBox1:hover{
+  box-shadow: 0px 0px 32px 11px #ffffff;
+}
+#grayBox2:hover{
+  box-shadow: 0px 0px 32px 11px #ffffff;
+}
+#grayBox3:hover{
+  box-shadow: 0px 0px 32px 11px #ffffff;
+}
+#grayBox4:hover{
+  box-shadow: 0px 0px 32px 11px #ffffff;
+}
+#grayBox5:hover{
+  box-shadow: 0px 0px 32px 11px #ffffff;
+}
+#grayBox6:hover{
+
+  
+  box-shadow: 0px 0px 32px 11px #ffffff;
+
+}
+#grayBox7:hover{
+box-shadow: 0px 0px 32px 11px #ffffff;
+}
+#grayBox8:hover{
+  box-shadow: 0px 0px 32px 11px #ffffff;
+}
+
+.bkg{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  position: fixed;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.inner{
+  width: 80vw;
+  border-radius: 4px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+.slidePicH{
+  background-size:contain; 
+  max-width: 100%; 
+  max-height: 100%;
+  margin: auto; 
+  border: 10px solid whitesmoke;
+  border-radius: 5px;
+  position:relative
+}
+#gb1{
+  display: none;
+}
+#gb2{
+  display: none;
+}
+#gb3{
+  display: none;
+}
+#gb4{
+  display: none;
+}
+#gb5{
+  display: none;
+}
+#gb6{
+  display: none;
+}
+#gb7{
+  display: none;
+}
+#gb8{
+  display: none;
+}
+
+.close{
+  position:absolute;
+  font-size: 30px;
+  top:10px;
+  right: 2px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.arrow {
+  position: absolute;
+  border: solid black;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 3px;
+  height:20px;
+  width:20px;
+  cursor: pointer;
+}
+.right {
+  right:0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  left:20px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+/*project titles*/
+#humidTitle{
+
+  width: 271px;
+  height: 59px;
+  left: 4.5vw;
+  top: 1234px;
+  font-family: 'Abyssinica SIL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7vw;
+  text-align: center;
+  
+  color: #FFFFFF;
+  
+}
+#mouseTitle{
+
+  width: 271px;
+  height: 59px;
+  left: 28vw;
+  top: 1234px;
+  
+  font-family: 'Abyssinica SIL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7vw;
+  text-align: center;
+  
+  color: #FFFFFF;
+}
+#fishTitle{
+
+  width: 271px;
+  height: 59px;
+  left: 227px;
+  top: 1515px;
+  
+  font-family: 'Abyssinica SIL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7vw;
+  text-align: center;
+  
+  color: #FFFFFF;
+}
+#penTitle{
+
+  width: 271px;
+  height: 59px;
+  left: 599px;
+  top: 1515px;
+  
+  font-family: 'Abyssinica SIL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7vw;
+  line-height: 30px;
+  text-align: center;
+  
+  color: #FFFFFF;
+  
+}
+#mapTitle{
+
+width: 271px;
+height: 59px;
+left: 993px;
+top: 1234px;
+
+font-family: 'Abyssinica SIL';
+font-style: normal;
+font-weight: 400;
+font-size: 1.7vw;
+line-height: 30px;
+text-align: center;
+
+color: #FFFFFF;
+}
+#gymTitle{
+width: 271px;
+height: 59px;
+left: 994px;
+top: 1515px;
+
+font-family: 'Abyssinica SIL';
+font-style: normal;
+font-weight: 400;
+font-size: 1.7vw;
+line-height: 30px;
+text-align: center;
+
+color: #FFFFFF;
+}
+#jokeTitle{
+width: 271px;
+height: 59px;
+left: 1390px;
+top: 1234px;
+
+font-family: 'Abyssinica SIL';
+font-style: normal;
+font-weight: 400;
+font-size: 1.7vw;
+line-height: 30px;
+text-align: center;
+
+color: #FFFFFF;
+}
+#splatterTitle{
+  width: 271px;
+  height: 59px;
+  left: 1390px;
+  top: 1515px;
+  
+  font-family: 'Abyssinica SIL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7vw;
+  line-height: 30px;
+  text-align: center;
+  
+  color: #FFFFFF;
+  
+
+}
+
+/*icons*/
+#iconBox{
+  position: absolute;
+width: 66px;
+height: 180px;
+left: 57px;
+top: 1160px;
+
+border: 9px solid #FFFFFF;
+border-radius: 32px;
+}
+#gear1{
+  position: absolute;
+width: 61.3px;
+height: 61.3px;
+left: 69.48px;
+top: 1167px;
+
+}
+#gear2{
+  position: absolute;
+width: 38px;
+height: 38px;
+left: 207px;
+top: 1422px;
+}
+#gear3{
+  position: absolute;
+width: 38px;
+height: 38px;
+left: 579px;
+top: 1422px;
+}
+#gear4{
+  position: absolute;
+width: 37px;
+height: 37px;
+left: 208px;
+top: 1700px;
+}
+#gear5{
+  position: absolute;
+width: 38px;
+height: 38px;
+left: 579px;
+top: 1700px;
+}
+#pc1{
+  position: absolute;
+  width: 54.63px;
+  height: 54.63px;
+  left: 72.45px;
+  top: 1228.11px;
+}
+#pc2{
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  left: 210px;
+  top: 1389px;
+}
+#pc3{
+  position: absolute;
+width: 33px;
+height: 33px;
+left: 976px;
+top: 1421px;
+}
+#pc4{
+  position: absolute;
+width: 33px;
+height: 33px;
+left: 1373px;
+top: 1421px;
+}
+#pc5{
+  position: absolute;
+width: 33px;
+height: 33px;
+left: 978px;
+top: 1696px;
+}
+#art1{
+  position: absolute;
+width: 64.26px;
+height: 64.26px;
+left: 68px;
+top: 1278.74px;
+}
+#art2{
+  position: absolute;
+width: 62.26px;
+height: 62.26px;
+left: 1368px;
+top: 1679px;
+}
+
+/*project pics*/
+.pics{
+  background-size:contain;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+.iconer{
+  position: absolute;
+  top: 76%;
+  left: -1%;
+  width: 25%;
+  height: 25%;
+}
+.iconer1{
+  position: absolute;
+  top: 76%;
+  left: 1.5%;
+  width: 20%;
+  height: 20%;
+}
+.iconer2{
+  position: absolute;
+  top: 72%;
+  left: -1.2%;
+  width: 30%;
+  height: 30%;
+}
+.pic1{
+  position: absolute;
+  top: 28vh;
+  left: 59vw;
+  width: 43vw;
+  height: 60vh;
+}
+
+#blkBox{
+
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 100vh;
+  max-width:100%;
+  background: #1b1b1b;
+}
+
+#projectsTitle{
+  width: 100vw;
+  height: 80px;
+  text-align: center;
+  top: 1080px;
+  
+  font-family: 'Abeezee';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+  /* identical to box height */
+  
+  
+  color: #d2d2d2;
+}
+/*about me*/
+#aboutTitle{
+  width: 100vw;
+  height: 76px;
+  top: 2092px;
+  
+  font-family: 'ABeeZee';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 76px;
+  /* identical to box height */
+  
+  text-align: center;
+  
+  color: #797979;
+}
+
+#aboutText{
+  left: 282px;
+  top: 2278px;
+  
+  font-family: 'Abyssinica SIL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  
+  color: #797979;
+  
+}
+#aBkBox{
+  position: absolute;
+  width: 1920px;
+  height: 100vh;
+  left: 0px;
+  top: 200vh;
+  
+  background: #E2E2E2;
+}
