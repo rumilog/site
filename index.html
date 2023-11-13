@@ -150,13 +150,14 @@
     </div>
     <div id="grayBox10" class="grow">
         <div style="position: absolute; top: 10px;left: 0; width: 100%; height:30%;text-align: center;"class="fitin">
-            <a id="splatterTitle" clas="texty">Art</a>
+            <a id="splatterTitle" clas="texty">Nauti(cal) Phrases</a>
         </div>
         <div style="position: absolute; top: 25%; width:70%;left:15%;height:60%;align-items: center; display: flex; justify-content: center;">
-            <img src="image 32.png" id="splatterPic" class="pics">
+            <img src="thumbnailNautical.png" id="splatterPic" class="pics">
+            <!--thumbnail picture-->
         </div>
         <div class="iconer2">
-            <img src="image 2.png" class="pics">
+            <img src="image 3.png" class="pics">
         </div>
     </div>
 
@@ -250,7 +251,17 @@
             
             <img src="exoskeletonResearch.png" class="slidePicH" id="slider4">
             <div class = "close" id="close9">+</div>
-            <button id="gb9Link">MORE</button>
+            <button id="gb9Link" class = "gbLink">MORE</button>
+            <!-- <div id= "4ra"class="arrow right"></div>
+            <div id= "4la"class="arrow left"></div> -->
+        </div>
+    </div>
+    <div class="bkg" id="gb10">
+        <div class="inner">
+            
+            <img src="Nautical.png" class="slidePicH" id="slider4">
+            <div class = "close" id="close10">+</div>
+            <button id="gb10Link" class = "gbLink">Click Me</button>
             <!-- <div id= "4ra"class="arrow right"></div>
             <div id= "4la"class="arrow left"></div> -->
         </div>
@@ -294,6 +305,10 @@
             cur = 0;
             document.querySelector('#gb9').style.display = 'flex';
         })
+        document.getElementById('grayBox10').addEventListener('click', function(){
+            cur = 0;
+            document.querySelector('#gb10').style.display = 'flex';
+        })
 
         document.querySelector('#close1').addEventListener('click', function(){
             cur = 0;
@@ -330,6 +345,10 @@
         document.querySelector('#close9').addEventListener('click', function(){
             cur = 0;
             document.querySelector('#gb9').style.display='none';
+        })
+        document.querySelector('#close10').addEventListener('click', function(){
+            cur = 0;
+            document.querySelector('#gb10').style.display='none';
         })
 
         slide1=["Mpic1.png","Mpic2.png","Mpic3.png"];
@@ -377,6 +396,10 @@
             }
             document.getElementById(img).src=slide[cur];
         }
+        document.getElementById('gb10Link').addEventListener('click', function() {
+            // Open the specified page in a new tab
+            window.open('https://nautical-translator.vercel.app/', '_blank');
+        });
     </script>
     
 
