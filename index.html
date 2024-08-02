@@ -30,7 +30,7 @@
     <div id="shadowBox"></div>
     <div id="greeting">Hi, I'm</div>
     <div id="bigname">Rumi Loghmani</div>
-    <div id ="title">I’m a computer engineering student from the Bay Area, interested in quantum computing, the utilization of compliant mechanisms in computers, and visual design in engineering.    
+    <div id ="title">I’m a computer engineering student from the Bay Area, interested in biomechatronics, soft robotics, and visual design in engineering.    
     </div>
     <div id="blkBox">
         <div style="position: absolute; top: 80px;left: 0; width: 100%; height:10%;text-align: center;">
@@ -175,6 +175,7 @@
         <div class="pic1">
             <img src="image 34.png" class="pics">
         </div>
+        <div id="contactButton" onclick="copyEmail()">Contact Me</div>
     </div>
     <div id="jumperAbout"style= "position: absolute; top: 200vh;"></div>
 
@@ -266,6 +267,10 @@
             <div id= "4la"class="arrow left"></div> -->
         </div>
     </div>
+
+    <footer>
+        
+    </footer>
 
     <script>
         var cur=0;
@@ -395,6 +400,14 @@
                 cur=0;
             }
             document.getElementById(img).src=slide[cur];
+        }
+        function copyEmail() {
+            const email = "rumiqlog@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email copied to clipboard: " + email);
+            }).catch(err => {
+                console.error("Failed to copy email: ", err);
+            });
         }
         document.getElementById('gb10Link').addEventListener('click', function() {
             // Open the specified page in a new tab
