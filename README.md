@@ -1,29 +1,25 @@
-# my-portfolio
+# **Rumi’s Portfolio**  
 
-This template should help get you started developing with Vue 3 in Vite.
+🚀 **A Vue.js-powered portfolio showcasing my work, projects, and experience.**  
 
-## Recommended IDE Setup
+## **🔹 Overview**  
+This is my personal portfolio website, built using **Vue.js**, to highlight the projects I’ve worked on, my research, and my journey in **biomechatronics, assistive technology, and software development**.  
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## **🔹 Features**  
+- ✅ **Dynamic Project Showcase** – Browse through past projects, including software, hardware, and research-based work.  
+- ✅ **Clean & Responsive UI** – Designed for **smooth navigation** and **accessibility** across devices.  
+- ✅ **Custom Styling & Animations** – Built with **Vue.js**, focusing on a polished user experience.  
+- ✅ **Horizontal Scrolling Gallery** – An interactive image carousel for project visuals.  
 
-## Customize configuration
+## **🔹 Tech Stack**  
+- **Frontend:** Vue.js, HTML, SCSS/CSS  
+- **Build Tools:** Vite  
+- **Version Control:** Git & GitHub  
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## **🔹 Running the Project Locally**  
+To run this project on your local machine:  
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+1. Clone the repository:  
+   ```sh
+   git clone https://github.com/your-username/my-portfolio.git
+   cd my-portfolio
