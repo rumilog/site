@@ -36,7 +36,8 @@ To run this project on your local machine:
 
 Feel free to reach out or check out my work through the following platforms:  
 
-- **Portfolio Website:** [rumis-portfolio.com](https://rumilog.github.io/site/)  
-- **LinkedIn:** [linkedin.com/in/rumi](https://linkedin.com/in/rumilog)  
-- **GitHub:** [github.com/Rumi](https://github.com/rumilog)  
-- **Email:** [your-email@example.com](mailto:rumiqlog@example.com)  
+- **🌐 Portfolio Website:** <a href="https://rumilog.github.io/site/" target="_blank">rumilog.github.io/site/</a>  
+- **💼 LinkedIn:** <a href="https://linkedin.com/in/rumilog" target="_blank">linkedin.com/in/rumilog</a>  
+- **💻 GitHub:** <a href="https://github.com/rumilog" target="_blank">github.com/rumilog</a>  
+- **📧 Email:** <a href="mailto:rumiqlog@gmail.com" target="_blank">rumiqlog@gmail.com</a>  
+
