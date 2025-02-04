@@ -32,3 +32,11 @@ To run this project on your local machine:
 4. **Open the site in your browser:**  
       Go to **[http://localhost:5173](http://localhost:5173/)**
 
+## 📬 Connect with Me  
+
+Feel free to reach out or check out my work through the following platforms:  
+
+- **Portfolio Website:** [rumis-portfolio.com](https://rumilog.github.io/site/)  
+- **LinkedIn:** [linkedin.com/in/rumi](https://linkedin.com/in/rumilog)  
+- **GitHub:** [github.com/Rumi](https://github.com/rumilog)  
+- **Email:** [your-email@example.com](mailto:rumiqlog@example.com)  
