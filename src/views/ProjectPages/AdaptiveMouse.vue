@@ -40,7 +40,7 @@ onMounted(() => {
     <BackButton />
     <h1>Adaptive Mouse Project</h1>
     <p>
-      This project focuses on designing a custom adaptive mouse for individuals with ectrodactyly, inspired by my close friend, Michael.
+      This project focuses on designing a custom adaptive mouse for individuals with ectrodactyly.
       The goal was to create an ergonomic, accessible input device that improves comfort and usability for people with limb differences.
     </p>
 

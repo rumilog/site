@@ -40,10 +40,20 @@ const copyEmail = () => {
     <!-- Grid Layout for 12 boxes -->
     <div class="projects-container">
       <!-- Project Blocks -->
+       <ProjectBlock
+        title="Research Lab"
+        :imageSrc="thumbnail4"
+        route="/projects/research-lab"
+      />
       <ProjectBlock
         title="TikTok Work"
         :imageSrc="thumbnail1"
         route="/projects/tiktok-work"
+      />
+      <ProjectBlock
+        title="Booz Allen Project"
+        :imageSrc="thumbnail5"
+        route="/projects/booz-allen"
       />
       <ProjectBlock
         title="Adaptive Mouse"
@@ -54,16 +64,6 @@ const copyEmail = () => {
         title="Nautical Phases"
         :imageSrc="thumbnail3" 
         route="/projects/nautical-phrases"
-      />
-      <ProjectBlock
-        title="Research Lab"
-        :imageSrc="thumbnail4"
-        route="/projects/research-lab"
-      />
-      <ProjectBlock
-        title="Booz Allen Project"
-        :imageSrc="thumbnail5"
-        route="/projects/booz-allen"
       />
       <ProjectBlock
         title="Audio Visualizer"

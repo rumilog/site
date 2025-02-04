@@ -8,7 +8,7 @@
     <h1>TikTok Internship - AI-driven Tools for Brand Ad Strategies</h1>
 
     <p>
-      During my internship at <strong>TikTok</strong>, I had the opportunity to work closely with the <strong>brand ads division</strong>, focusing on developing <strong>AI-driven tools</strong> that enhanced the sales team's ability to strategize and execute brand advertising campaigns more effectively.
+      During my internship at <strong>TikTok</strong>, I had the opportunity to work closely with the <strong>branded mission team</strong>, focusing on developing <strong>AI-driven tools</strong> that enhanced the sales team's ability to develop concepts and execute branded mission campaigns more effectively.
     </p>
     
     <h2>Key Responsibilities:</h2>
