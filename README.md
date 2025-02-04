@@ -19,16 +19,16 @@ This is my personal portfolio website, built using **Vue.js**, to highlight the 
 ## **🔹 Running the Project Locally**  
 To run this project on your local machine:  
 
-1. Clone the repository:  
+1. **Clone the repository:**  
    ```sh
    git clone https://github.com/your-username/my-portfolio.git
    cd my-portfolio
-2. Install Dependencies:  
+2. **Install Dependencies:**
    ```sh
    npm install
-3. Start the development server:  
+3. **Start the development server:**
    ```sh
    npm run dev
-4. Open the site in your browser:  
+4. **Open the site in your browser:**  
    Go to **[http://localhost:5173](http://localhost:5173/)**
 
