@@ -30,5 +30,5 @@ To run this project on your local machine:
    ```sh
    npm run dev
 4. **Open the site in your browser:**  
-   Go to **[http://localhost:5173](http://localhost:5173/)**
+      Go to **[http://localhost:5173](http://localhost:5173/)**
 
