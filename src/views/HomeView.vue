@@ -134,8 +134,9 @@ const copyEmail = () => {
   justify-content: flex-start;
   min-height: 100vh;
   padding: 1vw;
-  margin-top: 15vh; /* Adds space before the content */
+  padding-top: 20vh; /* Adds space before the content */
   text-align: center;
+  background-color: white;
 }
 
 /* Welcome Section */
@@ -148,6 +149,7 @@ const copyEmail = () => {
   font-weight: bold;
   display: inline-flex;
   align-items: center;
+  color: #424242;
 }
 
 .pixel-image {

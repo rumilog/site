@@ -106,6 +106,7 @@ export default {
   font-weight: bold;
   padding: 1vw;
   margin: 0;
+  color: rgb(58, 58, 58);
 }
 
 /* Border Elements */
