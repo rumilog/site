@@ -3,7 +3,7 @@
 🚀 **A Vue.js-powered portfolio showcasing my work, projects, and experience.**  
 
 ## **🔹 Overview**  
-This is my personal portfolio website, built using **Vue.js**, to highlight the projects I’ve worked on, my research, and my journey in **biomechatronics, assistive technology, and software development**.  
+This is my personal portfolio website, built using **Vue.js**, to highlight the projects I’ve worked on, and my journey in **software development, biomechatronics, and assistive technology**.  
 
 ## **🔹 Features**  
 - ✅ **Dynamic Project Showcase** – Browse through past projects, including software, hardware, and research-based work.  
