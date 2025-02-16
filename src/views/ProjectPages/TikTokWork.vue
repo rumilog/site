@@ -1,5 +1,9 @@
 <script setup>
   import BackButton from '../../components/BackButton.vue';
+  
+  const openLink = () => {
+    window.open('https://ads.tiktok.com/business/en-US/blog/branded-mission-topview-cpm-top-feed', '_blank');
+  };
 </script>
 
 <template>
@@ -26,6 +30,11 @@
     <p>
       The successful deployment of these AI-driven tools also allowed TikTok to offer <strong>more personalized ad solutions</strong>, helping the sales team better serve the needs of brand advertisers and ultimately driving <strong>increased engagement on the platform</strong>.
     </p>
+
+    <button class="external-link" @click="openLink">
+      <img src="@/assets/logo/ttlogo.png" alt="TikTok Logo" class="button-logo" />
+      Learn More About Branded Mission
+    </button>
 
     <!-- Tech Logos -->
     <div class="tech-suite">
@@ -67,6 +76,34 @@ p {
   font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+
+.external-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #191919;
+  color: white;
+  font-size: 1em;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 40px;
+  text-align: center;
+  justify-content: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.external-link:hover {
+  background-color: #373737;
+}
+
+.button-logo {
+  width: 24px;
+  height: 24px;
 }
 
 /* Tech Logos Section */

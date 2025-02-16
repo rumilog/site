@@ -46,18 +46,18 @@ export default {
 
       setTimeout(() => {
         projectBlock.value.style.transform = "scale(1.1)"; // Expand outward
-      }, 200);
+      }, 100);
 
       // Add a slight recoil after expanding
       setTimeout(() => {
         projectBlock.value.style.transition = "transform 0.1s ease-out";
         projectBlock.value.style.transform = "scale(1.05)"; // Slight recoil after expanding
-      }, 400); // Recoil after expansion
+      }, 300); // Recoil after expansion
 
       // Wait for the button and project block animation to finish before navigating
       setTimeout(() => {
         router.push(props.route);
-      }, 800); // Wait for full animation (400ms + 400ms for buttons)
+      }, 500); // Wait for full animation (400ms + 400ms for buttons)
     };
 
     return { goToProjectPage, projectBlock, allButtons };
