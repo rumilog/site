@@ -17,11 +17,18 @@ import RumiPixel from '../assets/RumiPixel.png';
 import RumiPic from '../assets/aboutmepic.jpg';
 import githubIcon from '../assets/logo/github.png';
 import linkedinIcon from '../assets/logo/linkedin.png'
+import { ref } from 'vue';
+
+const showResume = ref(false);
 
 const copyEmail = () => {
   navigator.clipboard.writeText("rumiqlog@gmail.com").then(() => {
     alert("Email copied to clipboard!");
   });
+};
+
+const toggleResume = () => {
+  showResume.value = !showResume.value;
 };
 
 </script>
@@ -126,6 +133,14 @@ const copyEmail = () => {
           <img :src="githubIcon" alt="GitHub" class="button-icon"> View Site Code
         </a>
     </div>
+
+    <!-- Resume Section -->
+    <div class="resume-section">
+      <h2 class="resume-title">Resume</h2>
+      <div class="resume-container">
+        <iframe src="/site/src/assets/resume/resume.pdf" class="resume-iframe"></iframe>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -138,80 +153,73 @@ const copyEmail = () => {
   justify-content: flex-start;
   min-height: 100vh;
   padding: 1vw;
-  padding-top: 20vh; /* Adds space before the content */
+  padding-top: 15vh;
   text-align: center;
-  background-color: white;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.main-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.8) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 /* Welcome Section */
 .welcome {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
 .welcome h1 {
-  font-size: 3vw;
-  font-weight: bold;
+  font-size: 3.5vw;
+  font-weight: 800;
   display: inline-flex;
   align-items: center;
-  color: #424242;
+  color: #3f3f3f;
+  transition: transform 0.3s ease;
+}
+
+.welcome h1:hover {
+  transform: scale(1.02);
 }
 
 .pixel-image {
-  width: 4vw; /* Adjust to the size of the text */
-  height: 4vw; /* Adjust to match the text size */
-  margin-left: 10px; /* Space between the image and text */
+  width: 4vw;
+  height: 4vw;
+  margin-left: 15px;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+  transition: transform 0.3s ease;
 }
 
-/* About Me Section with image on the right side */
-.about-me {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 6vh;
-  margin-left: 5vw;
-  margin-bottom: 1vh;
-  text-align: left;
-  width: 80%; /* Control the width of About Me */
-  background-color: #f7f7f7; /* Light gray background for distinction */
-  padding: 2vw;
-  border-radius: 10px; /* Rounded corners for styling */
-}
-
-.about-me-text {
-  width: 60%; /* Ensures the text section is not too wide */
-}
-
-.about-me h1 {
-  font-size: 2.5vw;
-  font-weight: bold;
-  color: #2c3e50; /* Darker color for the header */
-  border-bottom: 2px solid #ccc; /* Adds a subtle line under the title */
-  padding-bottom: 0.25rem;
-  margin-bottom: 1rem;
-}
-
-.about-me p {
-  font-size: 1.2vw;
-  color: #555;
-  line-height: 1.5;
+.pixel-image:hover {
+  transform: rotate(5deg);
 }
 
 /* Styling for the intro section */
 .intro {
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .intro p {
   font-size: 1.5vw;
-  color: #555;
-  font-weight: bold;
-  text-transform: uppercase; /* Bold and capitalized to make it stand out */
-  border-bottom: 2px solid #ccc;
+  font-weight: 800;
+  color: #5c5c5c;
+  text-transform: uppercase;
+  border-bottom: 2px solid #5c5c5c;
   padding-bottom: 0.5rem;
 }
 
-/* Grid Layout for Projects (4x3 layout) */
+/* Projects Container */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -220,59 +228,84 @@ const copyEmail = () => {
   max-width: 100vw;
   padding: 2vw;
   box-sizing: border-box;
-  margin-bottom: 3rem; /* Adds space below projects */
+  margin-bottom: 3rem;
 }
 
 /* Make the project boxes responsive with a minimum size */
 .projects-container > * {
-  height: 15vw;
+  height: 30vh;
   max-width: 22vw;
   margin: 0 auto;
 }
 
 /* Adjust the boxes for smaller screens */
 @media (max-width: 768px) {
-  .welcome h1, .about-me h1, .intro p {
-    font-size: 4vw;
-  }
-
-  .welcome p, .about-me p {
-    font-size: 2.5vw;
-  }
-
-  /* Adjust grid for smaller screens */
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .projects-container > * {
-    height: 30vw;
+    height: 35vh;
     max-width: 40vw;
   }
+}
 
-  /* Adjust About Me for smaller screens */
-  .about-me {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-    width: 100%;
-  }
+/* About Me Section */
+.about-me {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8vh auto;
+  text-align: left;
+  width: 85%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3vw;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .about-me-text {
-    width: 100%;
-  }
+.about-me:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
 
-  .rumi-pic {
-    width: 70%;
-    margin-top: 2vw;
-  }
+.about-me-text {
+  width: 60%;
+  padding-right: 3rem;
+}
+
+.about-me h1 {
+  font-size: 2.5vw;
+  font-weight: 700;
+  color: #2d3436;
+  border-bottom: 3px solid #6c5ce7;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-me p {
+  font-size: 1.2vw;
+  color: #2d3436;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
 }
 
 .rumi-pic {
-  width: 35%; /* Set the image width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Optional: add rounded corners */
+  width: 25vw;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
 }
+
+.rumi-pic:hover {
+  transform: scale(1.02);
+}
+
+/* Social Buttons */
 .buttons-container {
   margin-top: 2rem;
   display: flex;
@@ -283,12 +316,11 @@ const copyEmail = () => {
 }
 
 .social-button, .copy-button {
-  background-color: #e7e7e7;
+  background-color: white;
   color: rgb(46, 46, 46);
   font-size: 1.2vw;
   font-weight: 600;
   padding: 0.8vw 2vw;
-  border: 2px solid transparent;
   border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
@@ -300,42 +332,26 @@ const copyEmail = () => {
 }
 
 .social-button:hover, .copy-button:hover {
-  background-color: white;
+  background-color: #e7e7e7;
   color: #2c3e50;
-  border: 2px solid #2c3e50;
   transform: translateY(-2px);
+}
+
+.button-icon {
+  width: 1.5vw;
+  height: 1.5vw;
+  margin-right: 0.5vw;
 }
 
 .copy-button {
   background-color: #53bd45;
+  border: none;
 }
 
 .copy-button:hover {
   background-color: white;
   color: #377a2e;
-  border: 2px solid #377a2e;
-}
-
-.social-button {
-  /* ... other styles */
-  display: inline-flex; /* Use flexbox for icon and text alignment */
-  align-items: center; /* Vertically align icon and text */
-  justify-content: center; /* Horizontally align icon and text */
-}
-
-.button-icon {
-  width: 1.5vw; /* Adjust icon size as needed */
-  height: 1.5vw;
-  margin-right: 0.5vw; /* Space between icon and text */
-}
-
-/* Responsive icon sizes */
-@media (max-width: 768px) {
-    .button-icon {
-        width: 3vw;
-        height: 3vw;
-        margin-right: 1vw;
-    }
+  border: none;
 }
 
 .site-repo {
@@ -346,15 +362,103 @@ const copyEmail = () => {
 .site-repo:hover {
   background-color: white;
   color: #2c3e50;
-  border: 2px solid #2c3e50;
 }
 
 .site-repo .button-icon {
-  filter: brightness(0) invert(1); /* This makes the icon white */
+  filter: brightness(0) invert(1);
 }
 
 .site-repo:hover .button-icon {
-  filter: none; /* Remove the filter on hover to show original icon color */
+  filter: none;
 }
 
+/* Responsive icon sizes */
+@media (max-width: 768px) {
+  .button-icon {
+    width: 3vw;
+    height: 3vw;
+    margin-right: 1vw;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .about-me-text {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .rumi-pic {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .welcome h1 {
+    font-size: 2rem;
+  }
+
+  .about-me h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-me p {
+    font-size: 1rem;
+  }
+}
+
+/* Resume Section */
+.resume-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e4e8eb;
+}
+
+.resume-title {
+  font-size: 2vw;
+  font-weight: 700;
+  color: #2d3436;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.resume-container {
+  width: 100%;
+  height: 150vh;
+  position: relative;
+}
+
+.resume-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .resume-section {
+    width: 95%;
+    padding: 1rem;
+    margin: 2rem auto;
+  }
+
+  .resume-title {
+    font-size: 1.5rem;
+  }
+
+  .resume-container {
+    height: 60vh;
+  }
+}
 </style>

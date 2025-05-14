@@ -78,7 +78,7 @@ export default {
   margin: 2vw;
   position: relative;
   transition: transform 0.2s ease-in-out;
-  background-color: #f1f1f1;
+  background-color: #e0e0e0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -107,6 +107,7 @@ export default {
   padding: 1vw;
   margin: 0;
   color: rgb(58, 58, 58);
+  padding-top: 1vh;
 }
 
 /* Border Elements */
@@ -151,5 +152,18 @@ button {
 button.faded {
   transform: translateY(50px);
   opacity: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-block {
+    width: 80vw;
+    height: 40vh;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+  }
 }
 </style>
