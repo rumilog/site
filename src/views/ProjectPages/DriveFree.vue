@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import BackButton from '../../components/BackButton.vue';
+import driveFreeVideo from '../../assets/ProjectVideos/IMG_8731 (2).MOV';
 
 const galleryRef = ref(null);
 
@@ -37,7 +38,7 @@ onMounted(() => {
       <video 
         controls 
         class="project-video"
-        src="/site/src/assets/ProjectVideos/IMG_8731 (2).MOV"
+        :src="driveFreeVideo"
         preload="metadata"
       >
         Your browser does not support the video tag.

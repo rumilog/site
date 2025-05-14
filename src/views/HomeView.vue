@@ -17,6 +17,7 @@ import RumiPixel from '../assets/RumiPixel.png';
 import RumiPic from '../assets/aboutmepic.jpg';
 import githubIcon from '../assets/logo/github.png';
 import linkedinIcon from '../assets/logo/linkedin.png'
+import resumePDF from '../assets/resume/resume.pdf';
 import { ref } from 'vue';
 
 const showResume = ref(false);
@@ -138,7 +139,7 @@ const toggleResume = () => {
     <div class="resume-section">
       <h2 class="resume-title">Resume</h2>
       <div class="resume-container">
-        <iframe src="/site/src/assets/resume/resume.pdf" class="resume-iframe"></iframe>
+        <iframe :src="resumePDF" class="resume-iframe"></iframe>
       </div>
     </div>
   </main>

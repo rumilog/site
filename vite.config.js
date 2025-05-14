@@ -16,5 +16,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  assetsInclude: ['**/*.MOV', '**/*.mov'],
+  assetsInclude: ['**/*.MOV', '**/*.mov', '**/*.pdf'],
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name][extname]'
+      }
+    }
+  }
 })
