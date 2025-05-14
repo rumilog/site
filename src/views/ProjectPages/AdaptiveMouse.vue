@@ -39,6 +39,10 @@ onMounted(() => {
   <div class="project-details">
     <BackButton />
     <h1>Adaptive Mouse Project</h1>
+    <div class="project-info">
+      <p><strong>Role:</strong> Lead Designer, Hardware Engineer</p>
+      <p><strong>Tools:</strong> Fusion 360, 3D Printing, Arduino, Pressure Sensors</p>
+    </div>
     <p>
       This project focuses on designing a custom adaptive mouse for individuals with ectrodactyly.
       The goal was to create an ergonomic, accessible input device that improves comfort and usability for people with limb differences.
@@ -191,5 +195,14 @@ p {
 /* Button Hover Effect */
 .scroll-button:hover {
   background: rgba(0, 0, 0, 0.7);
+}
+
+.project-info {
+  margin-bottom: 20px;
+}
+
+.project-info p {
+  margin: 5px 0;
+  font-size: 1.2em;
 }
 </style>

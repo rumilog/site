@@ -8,7 +8,7 @@
   const router = useRouter();
   
   const goBack = () => {
-    router.push('/');
+    router.back();
   };
   </script>
   

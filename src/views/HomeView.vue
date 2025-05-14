@@ -12,6 +12,7 @@ import thumbnail9 from '../assets/thumbnail9.png';
 import thumbnail10 from '../assets/thumbnail10.png';
 import thumbnail11 from '../assets/thumbnail11.png';
 import thumbnail12 from '../assets/thumbnail12.png';
+import DriveFree1 from '../assets/DriveFree1.png';
 import RumiPixel from '../assets/RumiPixel.png';
 import RumiPic from '../assets/aboutmepic.jpg';
 import githubIcon from '../assets/logo/github.png';
@@ -40,7 +41,12 @@ const copyEmail = () => {
     <!-- Grid Layout for 12 boxes -->
     <div class="projects-container">
       <!-- Project Blocks -->
-       <ProjectBlock
+      <ProjectBlock
+        title="Drive-Free Hand"
+        :imageSrc="DriveFree1"
+        route="/projects/drive-free"
+      />
+      <ProjectBlock
         title="Research Lab"
         :imageSrc="thumbnail4"
         route="/projects/research-lab"
@@ -69,11 +75,6 @@ const copyEmail = () => {
         title="Audio Visualizer"
         :imageSrc="thumbnail6"
         route="/projects/audio"
-      />
-      <ProjectBlock
-        title="GymMate"
-        :imageSrc="thumbnail7"
-        route="/projects/gym-mate"
       />
       <ProjectBlock
         title="Jokes a Plenty"
@@ -121,7 +122,10 @@ const copyEmail = () => {
           <img :src="linkedinIcon" alt="LinkedIn" class="button-icon"> LinkedIn
         </a>
         <button class="copy-button" @click="copyEmail">Email Me :)</button>
-      </div>
+        <a href="https://github.com/rumilog/site" target="_blank" class="social-button site-repo">
+          <img :src="githubIcon" alt="GitHub" class="button-icon"> View Site Code
+        </a>
+    </div>
   </main>
 </template>
 
@@ -334,6 +338,23 @@ const copyEmail = () => {
     }
 }
 
+.site-repo {
+  background-color: #2c3e50;
+  color: white;
+}
 
+.site-repo:hover {
+  background-color: white;
+  color: #2c3e50;
+  border: 2px solid #2c3e50;
+}
+
+.site-repo .button-icon {
+  filter: brightness(0) invert(1); /* This makes the icon white */
+}
+
+.site-repo:hover .button-icon {
+  filter: none; /* Remove the filter on hover to show original icon color */
+}
 
 </style>

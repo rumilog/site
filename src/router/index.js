@@ -14,6 +14,7 @@ import AudioVisual from '../views/ProjectPages/AudioVisual.vue';
 import SmartAquarium from '../views/ProjectPages/SmartAquarium.vue';
 import LateralLeap from '../views/ProjectPages/LateralLeap.vue';
 import HumiditySensor from '../views/ProjectPages/HumiditySensor.vue';
+import DriveFree from '../views/ProjectPages/DriveFree.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -89,7 +90,11 @@ const router = createRouter({
       name: 'humidity-sensor',
       component: HumiditySensor,
     },
-
+    {
+      path: '/projects/drive-free',
+      name: 'drive-free',
+      component: DriveFree,
+    },
     // Fallback dynamic route for other projects
     {
       path: '/projects/:id', 
@@ -99,7 +104,16 @@ const router = createRouter({
     },
   ],
   scrollBehavior(to, from, savedPosition) {
-    return { top: 0 }
+    // If we have a saved position (like when using browser back/forward), use it
+    if (savedPosition) {
+      return savedPosition;
+    }
+    // If we're going to the home page from a project page, don't scroll to top
+    if (to.path === '/' && from.path.startsWith('/projects/')) {
+      return false;
+    }
+    // For all other navigation, scroll to top
+    return { top: 0 };
   },
 });
 

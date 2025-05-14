@@ -10,6 +10,10 @@
   <div class="project-details">
     <BackButton />
     <h1>TikTok Internship - AI-driven Tools for Brand Ad Strategies</h1>
+    <div class="project-info">
+      <p><strong>Role:</strong> Software Engineering Intern</p>
+      <p><strong>Tools:</strong> React, JavaScript, Python, Figma, Generative AI</p>
+    </div>
 
     <p>
       During my internship at <strong>TikTok</strong>, I had the opportunity to work closely with the <strong>branded mission team</strong>, focusing on developing <strong>AI-driven tools</strong> that enhanced the sales team's ability to develop concepts and execute branded mission campaigns more effectively.
@@ -119,5 +123,14 @@ p {
 .tech-logo {
   width: 60px;
   height: auto;
+}
+
+.project-info {
+  margin-bottom: 20px;
+}
+
+.project-info p {
+  margin: 5px 0;
+  font-size: 1.2em;
 }
 </style>

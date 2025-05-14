@@ -36,6 +36,10 @@
   <div class="project-details">
     <BackButton />
     <h1>Wearable Robotic Systems Laboratory (WRSL)</h1>
+    <div class="project-info">
+      <p><strong>Role:</strong> Research Assistant, Hardware Engineer</p>
+      <p><strong>Tools:</strong> SolidWorks, Fusion 360, Python, MATLAB, C++, Motion Capture Systems</p>
+    </div>
     <!-- <img src="/images/wrsl-lab.jpg" alt="WRSL Lab Image" class="project-image" /> -->
 
     <h2>Overview</h2>
@@ -202,5 +206,14 @@ p {
 /* Button Hover Effect */
 .scroll-button:hover {
   background: rgba(0, 0, 0, 0.7);
+}
+
+.project-info {
+  margin-bottom: 20px;
+}
+
+.project-info p {
+  margin: 5px 0;
+  font-size: 1.2em;
 }
 </style>
