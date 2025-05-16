@@ -12,7 +12,7 @@ import thumbnail9 from '../assets/thumbnail9.png';
 import thumbnail10 from '../assets/thumbnail10.png';
 import thumbnail11 from '../assets/thumbnail11.png';
 import thumbnail12 from '../assets/thumbnail12.png';
-import DriveFree1 from '../assets/DriveFree1.png';
+import DriveFree1 from '../assets/driveFree1.jpg';
 import RumiPixel from '../assets/RumiPixel.png';
 import RumiPic from '../assets/aboutmepic.jpg';
 import githubIcon from '../assets/logo/github.png';
