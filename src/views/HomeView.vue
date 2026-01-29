@@ -15,6 +15,7 @@ import thumbnail12 from '../assets/thumbnail12.png';
 import DriveFree1 from '../assets/driveFree1.jpg';
 import RumiPixel from '../assets/RumiPixel.png';
 import RumiPic from '../assets/aboutmepic.jpg';
+import LeapHandImg from '../assets/panda.jpg';
 import githubIcon from '../assets/logo/github.png';
 import linkedinIcon from '../assets/logo/linkedin.png'
 import resumePDF from '../assets/resume/resume.pdf';
@@ -50,6 +51,16 @@ const toggleResume = () => {
     <div class="projects-container">
       <!-- Project Blocks -->
       <ProjectBlock
+        title="LEAP Hand Control"
+        :imageSrc="LeapHandImg"
+        route="/projects/leap-hand"
+      />
+      <ProjectBlock
+        title="TikTok Work"
+        :imageSrc="thumbnail1"
+        route="/projects/tiktok-work"
+      />
+      <ProjectBlock
         title="Drive-Free Hand"
         :imageSrc="DriveFree1"
         route="/projects/drive-free"
@@ -58,11 +69,6 @@ const toggleResume = () => {
         title="Research Lab"
         :imageSrc="thumbnail4"
         route="/projects/research-lab"
-      />
-      <ProjectBlock
-        title="TikTok Work"
-        :imageSrc="thumbnail1"
-        route="/projects/tiktok-work"
       />
       <ProjectBlock
         title="Booz Allen Project"
@@ -116,7 +122,7 @@ const toggleResume = () => {
       <div class="about-me-text">
         <h1>About Me</h1>
         <p>
-          Hi, I'm Rumi! I'm a computer engineer with a passion for creating innovative technology that improves lives. From developing wearable robotics to designing assistive devices for those with unique challenges, I love working on projects that make a meaningful impact. I also have a strong background in full-stack development and have collaborated with cross-functional teams to deliver solutions in diverse industries. In my free time, I enjoy exploring new ideas and continuously learning to stay at the forefront of technology.
+          Hi, I'm Rumi! I'm a master's student in Mechanical Engineering at Carnegie Mellon University with a passion for bringing AI and machine learning into the physical world. Whether it's through robotics, autonomous vehicles, or other intelligent systems, I love working on projects that bridge cutting-edge algorithms with real-world impact. My background spans wearable robotics, assistive devices, and full-stack development—experience that's shaped how I approach complex, cross-disciplinary challenges. In my free time, I enjoy exploring new ideas and continuously learning to stay at the forefront of technology.
         </p>
       </div>
       <img :src="RumiPic" alt="Rumi" class="rumi-pic" />

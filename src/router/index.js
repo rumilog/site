@@ -15,6 +15,7 @@ import SmartAquarium from '../views/ProjectPages/SmartAquarium.vue';
 import LateralLeap from '../views/ProjectPages/LateralLeap.vue';
 import HumiditySensor from '../views/ProjectPages/HumiditySensor.vue';
 import DriveFree from '../views/ProjectPages/DriveFree.vue';
+import LeapHand from '../views/ProjectPages/LeapHand.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -94,6 +95,11 @@ const router = createRouter({
       path: '/projects/drive-free',
       name: 'drive-free',
       component: DriveFree,
+    },
+    {
+      path: '/projects/leap-hand',
+      name: 'leap-hand',
+      component: LeapHand,
     },
     // Fallback dynamic route for other projects
     {
