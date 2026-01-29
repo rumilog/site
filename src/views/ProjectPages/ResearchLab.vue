@@ -1,35 +1,34 @@
 <script setup>
-  import { ref, onMounted } from 'vue';
-  import BackButton from '../../components/BackButton.vue';
-  import wrsl1 from '../../assets/ProjectImages/wrsl1.jpg';
-  import wrsl2 from '../../assets/ProjectImages/wrsl2.jpg';
-  import wrsl3 from '../../assets/ProjectImages/wrsl3.jpg';
-  import wrsl4 from '../../assets/ProjectImages/wrsl4.jpg';
-  import wrsl5 from '../../assets/ProjectImages/wrsl5.jpg';
+import { ref, onMounted } from 'vue';
+import BackButton from '../../components/BackButton.vue';
+import wrsl1 from '../../assets/ProjectImages/wrsl1.jpg';
+import wrsl2 from '../../assets/ProjectImages/wrsl2.jpg';
+import wrsl3 from '../../assets/ProjectImages/wrsl3.jpg';
+import wrsl4 from '../../assets/ProjectImages/wrsl4.jpg';
+import wrsl5 from '../../assets/ProjectImages/wrsl5.jpg';
 
-  const galleryRef = ref(null);
+const galleryRef = ref(null);
 
-  const scrollLeft = () => {
-    if (galleryRef.value) {
-      galleryRef.value.scrollBy({ left: -300, behavior: 'smooth' });
-    }
-  };
+const scrollLeft = () => {
+  if (galleryRef.value) {
+    galleryRef.value.scrollBy({ left: -300, behavior: 'smooth' });
+  }
+};
 
-  const scrollRight = () => {
-    if (galleryRef.value) {
-      galleryRef.value.scrollBy({ left: 300, behavior: 'smooth' });
-    }
-  };
+const scrollRight = () => {
+  if (galleryRef.value) {
+    galleryRef.value.scrollBy({ left: 300, behavior: 'smooth' });
+  }
+};
 
-  // Enable mouse wheel horizontal scrolling
-  onMounted(() => {
-    if (galleryRef.value) {
-      galleryRef.value.addEventListener('wheel', (event) => {
-        event.preventDefault(); // Prevent vertical scrolling
-        galleryRef.value.scrollBy({ left: event.deltaY, behavior: 'smooth' });
-      });
-    }
-  });
+onMounted(() => {
+  if (galleryRef.value) {
+    galleryRef.value.addEventListener('wheel', (event) => {
+      event.preventDefault();
+      galleryRef.value.scrollBy({ left: event.deltaY, behavior: 'smooth' });
+    });
+  }
+});
 </script>
 
 <template>
@@ -40,7 +39,6 @@
       <p><strong>Role:</strong> Research Assistant, Hardware Engineer</p>
       <p><strong>Tools:</strong> SolidWorks, Fusion 360, Python, MATLAB, C++, Motion Capture Systems</p>
     </div>
-    <!-- <img src="/images/wrsl-lab.jpg" alt="WRSL Lab Image" class="project-image" /> -->
 
     <h2>Overview</h2>
     <p>
@@ -70,15 +68,16 @@
       The ankle-actuating device developed at WRSL aims to enhance rehabilitation outcomes for stroke survivors, enabling more effective recovery and independent mobility.
       This research not only contributes to the field of <strong>biomechatronics</strong> but also has the potential to expand into other assistive technologies, improving lives through innovative wearable robotics.
     </p>
-    <!-- Image Gallery with Navigation Buttons -->
+
+    <!-- Image Gallery -->
     <div class="gallery-container">
       <button @click="scrollLeft" class="scroll-button left">&lt;</button>
       <div ref="galleryRef" class="image-gallery">
-        <img :src="wrsl1" alt="wrsl 1" class="gallery-image">
-        <img :src="wrsl2" alt="wrsl 2" class="gallery-image">
-        <img :src="wrsl3" alt="wrsl 3" class="gallery-image">
-        <img :src="wrsl4" alt="wrsl 4" class="gallery-image">
-        <img :src="wrsl5" alt="wrsl 5" class="gallery-image">
+        <img :src="wrsl1" alt="WRSL Lab 1" class="gallery-image">
+        <img :src="wrsl2" alt="WRSL Lab 2" class="gallery-image">
+        <img :src="wrsl3" alt="WRSL Lab 3" class="gallery-image">
+        <img :src="wrsl4" alt="WRSL Lab 4" class="gallery-image">
+        <img :src="wrsl5" alt="WRSL Lab 5" class="gallery-image">
       </div>
       <button @click="scrollRight" class="scroll-button right">&gt;</button>
     </div>
@@ -86,134 +85,5 @@
 </template>
 
 <style scoped>
-.project-details {
-  text-align: left;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.project-image {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px 0;
-  object-fit: cover;
-}
-
-h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 1.8em;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-/* Gallery Container */
-.gallery-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-/* Image Gallery */
-.image-gallery {
-  display: flex;
-  gap: 10px;
-  padding: 10px 0;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  white-space: nowrap;
-  width: 100%;
-  max-width: 800px;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Individual Image Styling */
-.gallery-image {
-  width: 250px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
-  scroll-snap-align: start;
-}
-
-/* Scroll Buttons */
-.scroll-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 1.5em;
-  border-radius: 5px;
-  z-index: 10;
-}
-
-.scroll-button.left {
-  left: -50px;
-}
-
-.scroll-button.right {
-  right: -50px;
-}
-
-/* Show scrollbar */
-.image-gallery::-webkit-scrollbar {
-  height: 8px;
-}
-
-.image-gallery::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.image-gallery::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-.image-gallery::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-.image-gallery {
-  -ms-overflow-style: auto;
-  scrollbar-width: auto;
-}
-
-/* Button Hover Effect */
-.scroll-button:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.project-info {
-  margin-bottom: 20px;
-}
-
-.project-info p {
-  margin: 5px 0;
-  font-size: 1.2em;
-}
+/* Page-specific styles only - global styles handle the rest */
 </style>

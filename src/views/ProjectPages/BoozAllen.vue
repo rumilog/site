@@ -1,12 +1,11 @@
 <script setup>
-  import BackButton from '../../components/BackButton.vue';
+import BackButton from '../../components/BackButton.vue';
 </script>
 
 <template>
   <div class="project-details">
     <BackButton />
     <h1>Booz Allen Hamilton Internship Project</h1>
-    <!-- <img src="/images/booz-allen.jpg" alt="Booz Allen Hamilton Project Image" class="project-image" /> -->
 
     <h2>Overview</h2>
     <p>
@@ -23,7 +22,7 @@
       <li><strong>Full-Stack Development:</strong> Worked on both backend and frontend features using C++, Node.js, SQL, HTML, and CSS.</li>
       <li><strong>UI/UX Design:</strong> Focused on enhancing user experience, ensuring an intuitive interface for efficient data interaction.</li>
       <li><strong>Team Collaboration:</strong> Worked closely with other interns on a data-centric platform for real-time data sharing.</li>
-      <li><strong>Final Presentation:</strong> Delivered a briefing to Booz Allen Hamilton leadership, demonstrating the platform’s potential 
+      <li><strong>Final Presentation:</strong> Delivered a briefing to Booz Allen Hamilton leadership, demonstrating the platform's potential 
       for future adaptation in secure mapping solutions.</li>
     </ul>
 
@@ -45,40 +44,5 @@
 </template>
 
 <style scoped>
-.project-details {
-  text-align: left;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.project-image {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px 0;
-  object-fit: cover;
-}
-
-h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 1.8em;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
+/* Page-specific styles only - global styles handle the rest */
 </style>

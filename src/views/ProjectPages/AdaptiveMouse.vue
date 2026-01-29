@@ -24,11 +24,10 @@ const scrollRight = () => {
   }
 };
 
-// Enable mouse wheel horizontal scrolling
 onMounted(() => {
   if (galleryRef.value) {
     galleryRef.value.addEventListener('wheel', (event) => {
-      event.preventDefault(); // Prevent vertical scrolling
+      event.preventDefault();
       galleryRef.value.scrollBy({ left: event.deltaY, behavior: 'smooth' });
     });
   }
@@ -62,7 +61,7 @@ onMounted(() => {
       This project highlights the importance of user-centered design and assistive technology in improving accessibility.
     </p>
 
-    <!-- Image Gallery with Navigation Buttons -->
+    <!-- Image Gallery -->
     <div class="gallery-container">
       <button @click="scrollLeft" class="scroll-button left">&lt;</button>
       <div ref="galleryRef" class="image-gallery">
@@ -81,128 +80,5 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.project-details {
-  text-align: left;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 1.8em;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* Gallery Container */
-.gallery-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-/* Image Gallery */
-.image-gallery {
-  display: flex;
-  gap: 10px;
-  padding: 10px 0;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  white-space: nowrap;
-  width: 100%;
-  max-width: 800px;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Individual Image Styling */
-.gallery-image {
-  width: 250px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
-  scroll-snap-align: start;
-}
-
-/* Scroll Buttons */
-.scroll-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 1.5em;
-  border-radius: 5px;
-  z-index: 10;
-}
-
-.scroll-button.left {
-  left: -50px;
-}
-
-.scroll-button.right {
-  right: -50px;
-}
-
-/* Show scrollbar */
-.image-gallery::-webkit-scrollbar {
-  height: 8px;
-}
-
-.image-gallery::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.image-gallery::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-.image-gallery::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-.image-gallery {
-  -ms-overflow-style: auto;
-  scrollbar-width: auto;
-}
-
-/* Button Hover Effect */
-.scroll-button:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.project-info {
-  margin-bottom: 20px;
-}
-
-.project-info p {
-  margin: 5px 0;
-  font-size: 1.2em;
-}
+/* Page-specific styles only - global styles handle the rest */
 </style>

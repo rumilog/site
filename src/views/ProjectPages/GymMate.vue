@@ -1,9 +1,9 @@
 <script setup>
-  import BackButton from '../../components/BackButton.vue';
-  import JSLogo from '@/assets/logo/javascript-logo.png';
-  import TwilioLogo from '@/assets/logo/twilio-logo.png';
-  import GymMate1 from '../../assets/ProjectImages/GymMate1.png';
-  import GymMate2 from '../../assets/ProjectImages/GymMate2.png';
+import BackButton from '../../components/BackButton.vue';
+import JSLogo from '@/assets/logo/javascript-logo.png';
+import TwilioLogo from '@/assets/logo/twilio-logo.png';
+import GymMate1 from '../../assets/ProjectImages/GymMate1.png';
+import GymMate2 from '../../assets/ProjectImages/GymMate2.png';
 </script>
 
 <template>
@@ -12,7 +12,7 @@
     <h1>GymMate</h1>
     <p>
       GymMate is an application I created with my friend to enhance the home workout experience. 
-      It enables users to input their workout buddies’ phone numbers and personal workout goals. 
+      It enables users to input their workout buddies' phone numbers and personal workout goals. 
       Using <strong>computer vision</strong>, GymMate detects when a user completes their workout 
       and sends a <strong>real-time text notification</strong> to their workout buddies via Twilio.
     </p>
@@ -31,7 +31,7 @@
       integrating <strong>Twilio</strong> into the backend to enable automated text notifications.
     </p>
 
-    <h2>Key Features:</h2>
+    <h2>Key Features</h2>
     <ul>
       <li>Utilizes <strong>computer vision</strong> to detect workout completion.</li>
       <li>Sends <strong>real-time text notifications</strong> to workout buddies via Twilio.</li>
@@ -41,9 +41,9 @@
 
     <!-- Tech Suite Logos -->
     <div class="tech-suite">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Logo">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Logo">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma Logo">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Logo" class="tech-logo">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Logo" class="tech-logo">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma Logo" class="tech-logo">
       <img :src="TwilioLogo" alt="Twilio Logo" class="tech-logo" />
       <img :src="JSLogo" alt="JavaScript Logo" class="tech-logo" />
     </div>
@@ -57,69 +57,26 @@
 </template>
 
 <style scoped>
-strong {
-  font-weight: bold;
-}
-
-.project-details {
-  text-align: left;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-}
-
-h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 1.8em;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-/* Tech Logos Section */
-.tech-suite {
-  position: absolute;
-  top: 50px;
-  right: -150px;
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
-.tech-logo {
-  width: 80px;
-  height: auto;
-}
-
-/* GymMate Images Styling */
+/* Page-specific styles */
 .image-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 40px;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
   flex-wrap: wrap;
 }
 
 .gymmate-image {
   width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gymmate-image:hover {
+  transform: scale(1.02);
+  border-color: var(--accent-primary);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
 }
 </style>

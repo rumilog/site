@@ -1,14 +1,13 @@
 <script setup>
-  import BackButton from '../../components/BackButton.vue';
-  import Nautical1 from '../../assets/ProjectImages/Nautical1.png';
-  import Nautical2 from '../../assets/ProjectImages/Nautical2.png';
+import BackButton from '../../components/BackButton.vue';
+import Nautical1 from '../../assets/ProjectImages/Nautical1.png';
+import Nautical2 from '../../assets/ProjectImages/Nautical2.png';
 </script>
 
 <template>
   <div class="project-details">
     <BackButton />
     <h1>Nautical Phrases</h1>
-    <!-- <img src="/images/nautical-phrases.jpg" alt="Nautical Phrases Project Image" class="project-image" /> -->
 
     <h2>Overview</h2>
     <p>
@@ -36,62 +35,35 @@
       This project combines education with interactive technology, making learning nautical terms more engaging and visually appealing.
       By integrating 3D modeling and web development, it offers an immersive experience that enhances user comprehension.
     </p>
+
     <div class="image-container">
-      <img :src="Nautical1" alt="Nautical1" class="project-image" />
-      <img :src="Nautical2" alt="Nautical2" class="project-image" />
+      <img :src="Nautical1" alt="Nautical Phrases Screenshot 1" class="project-image" />
+      <img :src="Nautical2" alt="Nautical Phrases Screenshot 2" class="project-image" />
     </div>
   </div>
 </template>
 
 <style scoped>
-.project-details {
-  text-align: left;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.project-image {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px 0;
-  object-fit: cover;
-}
-
-h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 1.8em;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
+/* Page-specific styles */
 .image-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 40px;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
   flex-wrap: wrap;
 }
 
 .project-image {
   width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.02);
+  border-color: var(--accent-primary);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
 }
 </style>
