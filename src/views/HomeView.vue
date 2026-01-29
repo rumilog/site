@@ -737,7 +737,7 @@ const toggleResume = () => {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: rgba(255, 255, 255, 0.7);
   max-width: 600px;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 12rem;
   line-height: 1.7;
   min-height: 3.4em;
 }
@@ -765,6 +765,7 @@ const toggleResume = () => {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 1rem;
   margin-bottom: 3rem;
 }
 
