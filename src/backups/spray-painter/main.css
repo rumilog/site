@@ -1,0 +1,158 @@
+@import './base.css';
+
+#app {
+  margin: 0;
+  font-weight: normal;
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-primary);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-secondary);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+/* Monospace for tech bits */
+.mono {
+  font-family: 'Fira Code', monospace;
+  letter-spacing: -0.5px;
+}
+
+/* Global scroll behavior */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) var(--bg-primary);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 10px;
+}
+
+/* ==========================================
+   PROJECT PAGES - Graffiti Edition
+   ========================================== */
+
+.project-details {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 40px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-primary);
+}
+
+.project-details h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: white;
+  margin-bottom: 2rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  transform: rotate(-1deg);
+  text-shadow: 5px 5px 0px var(--accent-secondary);
+}
+
+.project-details h2 {
+  font-family: 'Bungee', cursive;
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  background: rgba(255,255,255,0.05);
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+.project-details p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  border-left: 3px solid rgba(255,255,255,0.1);
+  padding-left: 1.5rem;
+}
+
+.project-details .project-info {
+  background: white;
+  color: black;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 10px 10px 0px var(--accent-tertiary);
+  transform: rotate(0.5deg);
+}
+
+.project-details .project-info strong {
+  color: black;
+  font-family: 'Bungee', cursive;
+  font-size: 0.8rem;
+}
+
+.project-details .external-link {
+  font-family: 'Permanent Marker', cursive;
+  background: var(--accent-primary);
+  color: black;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 5px 5px 0px black;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.project-details .external-link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px black;
+}
+
+/* Gallery Styles - Graffiti Edition */
+.project-details .gallery-container {
+  position: relative;
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.project-details .image-gallery {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+  overflow-x: auto;
+}
+
+.project-details .gallery-image {
+  width: 300px;
+  height: 220px;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+  transform: rotate(var(--rot, -2deg));
+  transition: transform 0.3s;
+}
+
+.project-details .gallery-image:nth-child(even) {
+  --rot: 2deg;
+}
+
+.project-details .gallery-image:hover {
+  transform: rotate(0deg) scale(1.1);
+  z-index: 10;
+}

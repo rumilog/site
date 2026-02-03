@@ -57,26 +57,5 @@ import GymMate2 from '../../assets/ProjectImages/GymMate2.png';
 </template>
 
 <style scoped>
-/* Page-specific styles */
-.image-container {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.gymmate-image {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.gymmate-image:hover {
-  transform: scale(1.02);
-  border-color: var(--accent-primary);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
-}
+/* Page-specific styles - uses global .image-container styling */
 </style>

@@ -6,18 +6,27 @@ import thumbnail3 from '../assets/thumbnail3.png';
 import thumbnail4 from '../assets/thumbnail4.jpg';
 import thumbnail5 from '../assets/thumbnail5.jpg';
 import thumbnail6 from '../assets/thumbnail6.png';
+import thumbnail7 from '../assets/thumbnail7.png';
 import thumbnail8 from '../assets/thumbnail8.png';
 import thumbnail9 from '../assets/thumbnail9.png';
 import thumbnail10 from '../assets/thumbnail10.png';
 import thumbnail11 from '../assets/thumbnail11.png';
+import thumbnail12 from '../assets/thumbnail12.png';
 import DriveFree1 from '../assets/driveFree1.jpg';
 import RumiPixel from '../assets/RumiPixel.png';
 import RumiPic from '../assets/aboutmepic.jpg';
 import LeapHandImg from '../assets/panda.jpg';
+import githubIcon from '../assets/logo/github.png';
+import linkedinIcon from '../assets/logo/linkedin.png'
 import resumePDF from '../assets/resume/resume.pdf';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
+const isLoaded = ref(false);
 const showPow = ref(false);
+
+onMounted(() => {
+  setTimeout(() => isLoaded.value = true, 100);
+});
 
 const triggerPow = () => {
   showPow.value = true;
@@ -36,13 +45,11 @@ const copyEmail = () => {
     <!-- Hero Panel -->
     <div class="hero-panel ink-border">
       <div class="hero-content">
-        <div class="hero-title-row">
-          <h1 class="comic-title hero-title">
-            <span class="wow-burst">HEY!</span>
-            <span class="name-text">I'M RUMI!</span>
-          </h1>
+        <h1 class="comic-title hero-title">
+          <span class="wow-burst">HEY!</span>
+          <span class="name-text">I'M RUMI!</span>
           <img :src="RumiPixel" alt="Rumi" class="comic-avatar" />
-        </div>
+        </h1>
         
         <div class="speech-bubble">
           <p>I'm a Master's student at <strong>Carnegie Mellon</strong> building AI that actually moves things! 🤖</p>
@@ -57,7 +64,7 @@ const copyEmail = () => {
         </div>
       </div>
     </div>
-    
+
     <!-- Projects Section -->
     <span id="projects" class="scroll-anchor"></span>
     <section class="projects-section">
@@ -86,44 +93,21 @@ const copyEmail = () => {
           <div class="about-image-side">
             <div class="comic-photo-frame">
               <img :src="RumiPic" alt="Rumi" class="about-photo" />
-              <div class="school-badges">
-                <div class="school-badge cmu">CMU '27</div>
-                <div class="school-badge stevens">STEVENS '25</div>
-              </div>
+              <div class="caption">RUMI '27</div>
             </div>
           </div>
           <div class="about-text-side">
-            <h2 class="comic-title">ABOUT ME</h2>
+            <h2 class="comic-title">THE ORIGIN STORY</h2>
             <div class="speech-bubble-rect">
-              <p>I'm a Master's student in Mechanical Engineering at <strong>Carnegie Mellon University</strong>, where my research focuses on <strong>robotic manipulation and control</strong>. I work in the Mechanical and Artificial Intelligence Lab on AI and robotics. Also, yes, I'm a comic book nerd (as you might've guessed from this site). Nightwing, Forge, and Batman are my favorites. Outside of school, I like to rock climb, ski, spray paint murals, and surf.</p>
-            </div>
-            <div class="about-details">
-              <div class="detail-block">
-                <h3>Research Focus</h3>
-                <p>At CMU's Mechanical and AI Lab, I research diffusion policy for dexterous robotic manipulation. I built a VR teleoperation system to collect demonstration data, and I'm training diffusion models to learn complex hand manipulation behaviors—working toward robots that can handle real-world tasks with human-like dexterity.</p>
-              </div>
-              <div class="detail-block">
-                <h3>Beyond the Lab</h3>
-                <p>I like building things that actually ship. I've led a team building a low-cost prosthetic hand, worked on creative tools at TikTok, and prototyped assistive tech for people with disabilities. I'm just as happy writing specs and talking to users as I am finetuning a computer vision model.</p>
-              </div>
+              <p>I'm a Mechanical Engineer at CMU obsessing over robotics. When I'm not coding AI, I'm spray painting walls, climbing rocks, or hitting the slopes! ⛷️🧗‍♂️</p>
             </div>
             <div class="tech-pills">
               <div class="pill">PYTHON</div>
-              <div class="pill">PYTORCH</div>
-              <div class="pill">JS/HTML/CSS</div>
-              <div class="pill">C++</div>
               <div class="pill">ROS</div>
-              <div class="pill">ISAAC SIM</div>
-              <div class="pill">Solidworks & Fusion360</div>
+              <div class="pill">AI/ML</div>
+              <div class="pill">3D PRINTING</div>
             </div>
           </div>
-        </div>
-        <div class="resume-section">
-          <h2 class="comic-title resume-heading">RESUME</h2>
-          <div class="resume-embed-wrap">
-            <iframe :src="resumePDF + '#zoom=100&toolbar=1'" class="resume-pdf" title="Rumi's Resume"></iframe>
-          </div>
-          <a :href="resumePDF" target="_blank" rel="noopener" class="resume-download">Download PDF</a>
         </div>
       </div>
     </section>
@@ -136,8 +120,8 @@ const copyEmail = () => {
           <a href="https://github.com/rumilog" target="_blank" class="comic-btn">GITHUB</a>
           <a href="https://www.linkedin.com/in/rumilog" target="_blank" class="comic-btn">LINKEDIN</a>
           <button class="comic-btn action-red" @click="copyEmail">EMAIL ME!</button>
+        </div>
       </div>
-    </div>
     </section>
 
     <footer class="footer">
@@ -171,20 +155,13 @@ const copyEmail = () => {
   opacity: 0.05;
 }
 
-.hero-title-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 40px;
-}
-
 .hero-title {
   font-size: clamp(3rem, 8vw, 6rem);
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
+  align-items: center;
+  gap: 10px;
 }
 
 .wow-burst {
@@ -193,27 +170,12 @@ const copyEmail = () => {
   padding: 10px 30px;
   clip-path: polygon(0% 20%, 20% 20%, 15% 0%, 40% 15%, 50% 0%, 65% 15%, 85% 0%, 80% 20%, 100% 20%, 90% 45%, 100% 70%, 80% 75%, 85% 100%, 65% 85%, 55% 100%, 40% 85%, 15% 100%, 20% 75%, 0% 75%, 10% 45%);
   font-size: 0.5em;
-  transform: rotate(-10deg);
+  transform: rotate(-10deg) translateX(-50px);
 }
 
 .comic-avatar {
-  width: 170px;
-  height: 170px;
-  flex-shrink: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
+  width: 100px;
+  filter: drop-shadow(5px 5px 0px black);
 }
 
 /* Speech Bubbles */
@@ -229,7 +191,7 @@ const copyEmail = () => {
   box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
 }
 
-.speech-bubble::before {
+.speech-bubble::after {
   content: "";
   position: absolute;
   bottom: -30px;
@@ -240,57 +202,30 @@ const copyEmail = () => {
   transform: translateX(-50%);
 }
 
-.speech-bubble::after {
-  content: "";
-  position: absolute;
-  bottom: -22px;
-  left: 50%;
-  border-width: 24px 16px 0;
-  border-style: solid;
-  border-color: white transparent transparent;
-  transform: translateX(-50%);
-}
-
 /* Buttons */
 .comic-btn {
   display: inline-block;
   font-family: 'Luckiest Guy', cursive;
-  font-size: 1.8rem;
-  padding: 18px 50px;
-  border: 5px solid black;
-  box-shadow: 8px 8px 0px black;
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  border: 4px solid black;
+  box-shadow: 6px 6px 0px black;
   text-decoration: none;
   color: black;
   background: white;
-  transition: all 0.15s ease;
+  margin: 10px;
+  transition: 0.1s;
   cursor: pointer;
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .comic-btn:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 12px 12px 0px black;
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px black;
 }
 
-.comic-btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 4px 4px 0px black;
-}
-
-.action-red { 
-  background: #ff0000; 
-  color: white; 
-}
-.action-blue { 
-  background: #03a9f4; 
-  color: white; 
-}
-.action-yellow { 
-  background: #ffde03; 
-  color: black;
-}
+.action-red { background: var(--comic-red); color: white; }
+.action-blue { background: var(--comic-blue); color: white; }
+.action-yellow { background: var(--comic-yellow); }
 
 .burst-label {
   position: absolute;
@@ -345,35 +280,16 @@ const copyEmail = () => {
 }
 
 .about-photo {
-    width: 100%;
+  width: 100%;
   display: block;
   border: 2px solid black;
 }
 
-.school-badges {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  padding-top: 10px;
-}
-
-.school-badge {
+.caption {
   font-family: 'Bangers', cursive;
-  font-size: 0.9rem;
-  padding: 5px 12px;
-  border: 3px solid black;
-  transform: skewX(-5deg);
-  box-shadow: 3px 3px 0px black;
-}
-
-.school-badge.stevens {
-  background: #4a4a4a;
-  color: white;
-}
-
-.school-badge.cmu {
-  background: #c41230;
-  color: white;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.5rem;
 }
 
 .speech-bubble-rect {
@@ -384,84 +300,10 @@ const copyEmail = () => {
   margin: 20px 0;
 }
 
-.about-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin: 20px 0;
-}
-
-.detail-block {
-  background: #f9f9f9;
-  border: 3px solid black;
-  padding: 15px;
-}
-
-.detail-block h3 {
-  font-family: 'Bangers', cursive;
-  font-size: 1.3rem;
-  color: var(--comic-red);
-  margin-bottom: 10px;
-  border-bottom: 2px solid black;
-  padding-bottom: 5px;
-}
-
-.detail-block p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
-}
-
 .tech-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-}
-
-.resume-section {
-  margin-top: 40px;
-  padding-top: 30px;
-  border-top: 4px dashed black;
-  text-align: center;
-}
-
-.resume-heading {
-  margin-bottom: 20px;
-  font-size: 2.5rem;
-}
-
-.resume-embed-wrap {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 16px;
-  border: 4px solid black;
-  box-shadow: 8px 8px 0px black;
-  background: #f5f5f5;
-  overflow: hidden;
-}
-
-.resume-pdf {
-  width: 100%;
-  height: 85vh;
-  min-height: 700px;
-  display: block;
-  border: none;
-}
-
-.resume-download {
-  display: inline-block;
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 1.1rem;
-  color: var(--comic-blue);
-  text-decoration: none;
-  border-bottom: 2px solid var(--comic-blue);
-  padding-bottom: 2px;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.resume-download:hover {
-  color: var(--comic-red);
-  border-color: var(--comic-red);
 }
 
 .pill {
@@ -481,14 +323,6 @@ const copyEmail = () => {
   text-align: center;
 }
 
-.contact-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-}
-
 .footer {
   text-align: center;
   padding: 40px;
@@ -504,80 +338,7 @@ const copyEmail = () => {
 }
 
 @media (max-width: 768px) {
-  .comic-page {
-    padding: 20px 15px;
-  }
-  
-  .about-layout { 
-    grid-template-columns: 1fr; 
-  }
-  
-  .about-details {
-    grid-template-columns: 1fr;
-  }
-  
-  .hero-panel { 
-    padding: 30px 20px; 
-  }
-  
-  .hero-title-row {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .hero-title {
-    align-items: center;
-    font-size: clamp(2.5rem, 10vw, 4rem);
-  }
-  
-  .comic-avatar {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .speech-bubble {
-    padding: 15px 25px;
-    font-size: 1.2rem;
-    border-radius: 30px;
-  }
-  
-  .comic-btn {
-    font-size: 1.4rem;
-    padding: 14px 30px;
-  }
-  
-  .about-panel {
-    padding: 25px;
-  }
-  
-  .resume-embed-wrap {
-    box-shadow: 5px 5px 0px black;
-  }
-  
-  .resume-pdf {
-    height: 60vh;
-    min-height: 400px;
-  }
-  
-  .contact-panel {
-    padding: 40px 20px;
-  }
-  
-  .contact-buttons {
-    gap: 15px;
-  }
-  
-  .projects-grid {
-    gap: 25px;
-  }
-  
-  .section-label {
-    font-size: 1.2rem;
-  }
-  
-  .footer {
-    padding: 30px 20px;
-    font-size: 1.5rem;
-  }
+  .about-layout { grid-template-columns: 1fr; }
+  .hero-panel { padding: 30px; }
 }
 </style>

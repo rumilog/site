@@ -46,24 +46,5 @@ import EcoMaps from '../../assets/ProjectImages/EcoMaps.png';
 </template>
 
 <style scoped>
-/* Page-specific styles */
-.image-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2.5rem;
-}
-
-.eco-image {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.eco-image:hover {
-  transform: scale(1.02);
-  border-color: var(--accent-primary);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
-}
+/* Page-specific styles - uses global .image-container styling */
 </style>

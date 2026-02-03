@@ -2,360 +2,294 @@
 
 #app {
   margin: 0;
-  font-weight: normal;
   min-height: 100vh;
 }
 
 a {
   text-decoration: none;
-  color: var(--accent-primary);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
+  color: var(--comic-blue);
+  transition: color 0.1s ease;
+  font-weight: bold;
 }
 
 a:hover {
-  color: var(--text-primary);
-  text-shadow: 0 0 20px var(--accent-primary);
-}
-
-/* Global link underline effect */
-a:not(.social-button):not(.copy-button)::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--accent-gradient);
-  transition: width 0.3s ease;
-}
-
-a:not(.social-button):not(.copy-button):hover::after {
-  width: 100%;
-}
-
-strong {
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-/* Monospace text for code/tech feel */
-.mono {
-  font-family: 'Fira Code', monospace;
-}
-
-/* Animated background noise texture */
-.noise-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  color: var(--comic-red);
 }
 
 /* ==========================================
-   PROJECT PAGES - Global Styles
+   PROJECT PAGES - Comic Edition
    ========================================== */
 
 .project-details {
+  background: white;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 60px;
+  border: 6px solid black;
+  box-shadow: 15px 15px 0px black;
   position: relative;
-  min-height: 100vh;
-  padding: 80px 40px 60px;
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--bg-primary);
-  animation: page-fade-in 0.6s ease;
-}
-
-@keyframes page-fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.project-details::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 212, 255, 0.08), transparent),
-    radial-gradient(ellipse 60% 40% at 90% 80%, rgba(168, 85, 247, 0.05), transparent);
-  pointer-events: none;
-  z-index: -1;
 }
 
 .project-details h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-  background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.8) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: 'Bangers', cursive;
+  font-size: 4rem;
+  color: var(--comic-yellow);
+  -webkit-text-stroke: 3px black;
+  text-shadow: 6px 6px 0px black;
+  margin-bottom: 2rem;
+  transform: rotate(-1deg);
 }
 
 .project-details h2 {
-  font-size: clamp(1.3rem, 3vw, 1.75rem);
-  font-weight: 600;
-  color: var(--accent-primary);
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid rgba(0, 212, 255, 0.2);
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2rem;
+  background: var(--comic-blue);
+  color: white;
+  padding: 10px 20px;
   display: inline-block;
-}
-
-.project-details h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  transform: skewX(-10deg);
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 3px solid black;
 }
 
 .project-details p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-secondary);
-  margin-bottom: 1.25rem;
-}
-
-.project-details ul,
-.project-details ol {
-  margin-left: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
-.project-details li {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 0.75rem;
-  position: relative;
-}
-
-.project-details ul li::marker {
-  color: var(--accent-primary);
-}
-
-.project-details strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-/* Project Info Card */
 .project-details .project-info {
-  background: rgba(20, 20, 30, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-}
-
-.project-details .project-info p {
-  margin: 0.5rem 0;
-  font-size: 1rem;
+  background: #eee;
+  padding: 20px;
+  border: 3px solid black;
+  margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 20px;
 }
 
 .project-details .project-info strong {
-  color: var(--accent-primary);
-  min-width: 80px;
+  font-family: 'Bangers', cursive;
+  font-size: 1.2rem;
+  color: var(--comic-red);
 }
 
-/* Gallery Styles */
+.project-details .external-link {
+  font-family: 'Luckiest Guy', cursive;
+  background: var(--comic-red);
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: 4px solid black;
+  box-shadow: 6px 6px 0px black;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.project-details .external-link:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px black;
+}
+
+/* Gallery - Horizontal scroll with buttons */
 .project-details .gallery-container {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.project-details .gallery-image {
   width: 100%;
-  margin: 2.5rem 0;
-  padding: 0 50px;
+  height: 250px;
+  object-fit: cover;
+  border: 4px solid black;
+  box-shadow: 8px 8px 0px black;
+  transition: transform 0.2s;
+}
+
+.project-details .gallery-image:hover {
+  transform: scale(1.05) rotate(1deg);
+  z-index: 5;
 }
 
 .project-details .image-gallery {
   display: flex;
-  gap: 1rem;
-  padding: 1rem 0;
+  gap: 20px;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  width: 100%;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent-primary) rgba(255,255,255,0.1);
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  flex: 1;
 }
 
 .project-details .image-gallery::-webkit-scrollbar {
-  height: 6px;
+  height: 8px;
 }
 
 .project-details .image-gallery::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 3px;
+  background: #eee;
+  border: 2px solid black;
 }
 
 .project-details .image-gallery::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, var(--accent-primary), var(--accent-tertiary));
-  border-radius: 3px;
+  background: var(--comic-blue);
+  border: 2px solid black;
 }
 
-.project-details .gallery-image {
-  width: 280px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
+.project-details .image-gallery .gallery-image {
   flex-shrink: 0;
-  scroll-snap-align: start;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.project-details .gallery-image:hover {
-  transform: scale(1.02);
-  border-color: var(--accent-primary);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+  height: 300px;
+  width: auto;
+  max-width: 400px;
+  object-fit: cover;
 }
 
 .project-details .scroll-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  color: var(--accent-primary);
-  padding: 12px 16px;
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  background: var(--comic-yellow);
+  color: black;
+  border: 4px solid black;
+  box-shadow: 4px 4px 0px black;
+  padding: 10px 15px;
   cursor: pointer;
-  font-size: 1.25rem;
-  border-radius: 10px;
-  z-index: 10;
-  transition: all 0.3s ease;
+  transition: 0.1s;
+  z-index: 5;
 }
 
 .project-details .scroll-button:hover {
-  background: var(--accent-primary);
-  color: var(--bg-primary);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px black;
+  background: var(--comic-red);
+  color: white;
 }
 
-.project-details .scroll-button.left {
-  left: 0;
-}
-
-.project-details .scroll-button.right {
-  right: 0;
-}
-
-/* Video Container */
-.project-details .video-container {
-  width: 100%;
-  margin: 2rem 0;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: #000;
-}
-
-.project-details .project-video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* External Link Buttons */
-.project-details .external-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  color: var(--accent-primary);
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 12px 24px;
-  border-radius: 12px;
-  cursor: pointer;
-  margin-top: 2rem;
-  transition: all 0.3s ease;
-}
-
-.project-details .external-link:hover {
-  background: var(--accent-primary);
-  color: var(--bg-primary);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
-}
-
-.project-details .button-logo {
-  width: 24px;
-  height: 24px;
-}
-
-/* Tech Logos */
+/* Tech logos in project pages */
 .project-details .tech-suite {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: rgba(20, 20, 30, 0.4);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 15px;
+  justify-content: center;
+  margin: 30px 0;
+  padding: 20px;
+  background: #eee;
+  border: 3px solid black;
 }
 
 .project-details .tech-logo {
   width: 50px;
   height: 50px;
   object-fit: contain;
-  filter: grayscale(100%) brightness(0.8);
-  transition: all 0.3s ease;
+  filter: drop-shadow(2px 2px 0px black);
+  transition: transform 0.2s;
 }
 
 .project-details .tech-logo:hover {
-  filter: grayscale(0%) brightness(1);
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(-5deg);
 }
 
-/* Responsive */
+/* Button logo inside external links */
+.project-details .button-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+/* Standalone images in project pages */
+.project-details .image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.project-details .image-container img {
+  max-width: 100%;
+  height: auto;
+  border: 4px solid black;
+  box-shadow: 8px 8px 0px black;
+  transition: transform 0.2s;
+}
+
+.project-details .image-container img:hover {
+  transform: scale(1.02) rotate(1deg);
+}
+
+/* Video - constrained, centered, fully visible */
+.project-details .video-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 40px;
+  width: 100%;
+}
+
+.project-details .project-video {
+  max-width: 100%;
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  border: 4px solid black;
+  box-shadow: 8px 8px 0px black;
+}
+
+/* Lists */
+.project-details ul {
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+.project-details li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Responsive - Project Pages */
 @media (max-width: 768px) {
   .project-details {
-    padding: 70px 20px 40px;
+    margin: 20px 15px;
+    padding: 30px 20px;
+    border-width: 4px;
+    box-shadow: 8px 8px 0px black;
   }
   
-  .project-details .gallery-container {
-    padding: 0;
+  .project-details h1 {
+    font-size: 2.5rem;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 4px 4px 0px black;
   }
   
-  .project-details .scroll-button {
-    display: none;
+  .project-details h2 {
+    font-size: 1.5rem;
+    padding: 8px 15px;
   }
   
-  .project-details .gallery-image {
-    width: 250px;
-    height: 180px;
+  .project-details p {
+    font-size: 1.05rem;
   }
   
-  .project-details .tech-suite {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
+  .project-details .project-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .project-details .external-link {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+  
+  .project-details .image-gallery .gallery-image {
+    height: 200px;
+    max-width: 280px;
+  }
+  
+  .project-details .project-video {
+    max-height: 50vh;
   }
 }
