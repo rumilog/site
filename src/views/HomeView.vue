@@ -14,6 +14,8 @@ import DriveFree1 from '../assets/driveFree1.jpg';
 import RumiPixel from '../assets/RumiPixel.png';
 import RumiPic from '../assets/aboutmepic.jpg';
 import LeapHandImg from '../assets/panda.jpg';
+import homeImage from '../assets/home image.png';
+import homeImage2 from '../assets/home image 2.png';
 import resumePDF from '../assets/resume/resume.pdf';
 import { ref } from 'vue';
 
@@ -35,6 +37,14 @@ const copyEmail = () => {
   <main class="comic-page">
     <!-- Hero Panel -->
     <div class="hero-panel ink-border">
+      <router-link to="/projects/leap-hand" class="featured-aside">
+        <span class="featured-aside-label">NEW!</span>
+        <span class="featured-aside-text">Watch Teleoperation<br />Demo →</span>
+      </router-link>
+      <div class="hero-aside-images">
+        <img :src="homeImage" alt="" class="hero-aside-image hero-aside-image-tilt-left" />
+        <img :src="homeImage2" alt="" class="hero-aside-image hero-aside-image-tilt-right" />
+      </div>
       <div class="hero-content">
         <div class="hero-title-row">
           <h1 class="comic-title hero-title">
@@ -159,7 +169,79 @@ const copyEmail = () => {
   padding: 60px;
   margin-bottom: 60px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+}
+
+/* Featured aside (NEW! sticker - can sit outside the white box) */
+.featured-aside {
+  position: absolute;
+  left: -50px;
+  top: 30%;
+  transform: translateY(-50%) rotate(-4deg);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 24px;
+  background: var(--comic-yellow);
+  border: 4px solid black;
+  box-shadow: 6px 6px 0px black;
+  text-decoration: none;
+  color: black;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.featured-aside:hover {
+  transform: translateY(-50%) rotate(-4deg) translate(-2px, -2px);
+  box-shadow: 9px 9px 0px black;
+}
+
+.featured-aside-label {
+  font-family: 'Bangers', cursive;
+  font-size: 1.9rem;
+  background: var(--comic-red);
+  color: white;
+  padding: 6px 20px;
+  border: 3px solid black;
+}
+
+.featured-aside-text {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  line-height: 1.3;
+  max-width: 8em;
+}
+
+/* Hero aside images (right side, sticker-style) */
+.hero-aside-images {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%) rotate(3deg);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.hero-aside-image {
+  max-height: 260px;
+  width: auto;
+  border: 4px solid black;
+  box-shadow: 6px 6px 0px black;
+  object-fit: contain;
+}
+
+.hero-aside-image-tilt-left {
+  transform: rotate(-6deg);
+}
+
+.hero-aside-image-tilt-right {
+  transform: rotate(5deg);
 }
 
 .hero-panel::before {
@@ -507,6 +589,39 @@ const copyEmail = () => {
   .comic-page {
     padding: 20px 15px;
   }
+
+  .hero-panel {
+    padding: 30px 20px;
+  }
+
+  .featured-aside {
+    left: 12px;
+    top: 20px;
+    transform: rotate(-4deg);
+    padding: 12px 16px;
+  }
+
+  .featured-aside-label {
+    font-size: 1.4rem;
+    padding: 4px 14px;
+  }
+
+  .featured-aside-text {
+    font-size: 0.95rem;
+  }
+
+  .featured-aside:hover {
+    transform: rotate(-2deg) translate(-2px, -2px);
+  }
+
+  .hero-aside-images {
+    right: -20px;
+    top: 35%;
+  }
+
+  .hero-aside-image {
+    max-height: 140px;
+  }
   
   .about-layout { 
     grid-template-columns: 1fr; 
@@ -514,10 +629,6 @@ const copyEmail = () => {
   
   .about-details {
     grid-template-columns: 1fr;
-  }
-  
-  .hero-panel { 
-    padding: 30px 20px; 
   }
   
   .hero-title-row {

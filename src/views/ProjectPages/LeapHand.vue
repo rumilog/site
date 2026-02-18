@@ -1,11 +1,24 @@
 <script setup>
 import BackButton from '../../components/BackButton.vue';
+import leapVideo from '../../assets/ProjectVideos/LEAP.mov';
 </script>
 
 <template>
   <div class="project-details">
     <BackButton />
     <h1>Robotic LEAP Hand Control</h1>
+
+    <div class="video-container">
+      <video
+        controls
+        class="project-video"
+        :src="leapVideo"
+        preload="metadata"
+      >
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
     <div class="project-info">
       <p><strong>Role:</strong> Graduate Researcher</p>
       <p><strong>Lab:</strong> Mechanical and AI Laboratory, Carnegie Mellon University</p>
