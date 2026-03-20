@@ -595,32 +595,11 @@ const copyEmail = () => {
   }
 
   .featured-aside {
-    left: 12px;
-    top: 20px;
-    transform: rotate(-4deg);
-    padding: 12px 16px;
-  }
-
-  .featured-aside-label {
-    font-size: 1.4rem;
-    padding: 4px 14px;
-  }
-
-  .featured-aside-text {
-    font-size: 0.95rem;
-  }
-
-  .featured-aside:hover {
-    transform: rotate(-2deg) translate(-2px, -2px);
+    display: none;
   }
 
   .hero-aside-images {
-    right: -20px;
-    top: 35%;
-  }
-
-  .hero-aside-image {
-    max-height: 140px;
+    display: none;
   }
   
   .about-layout { 
