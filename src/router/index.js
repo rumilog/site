@@ -15,7 +15,11 @@ import SmartAquarium from '../views/ProjectPages/SmartAquarium.vue';
 import LateralLeap from '../views/ProjectPages/LateralLeap.vue';
 import HumiditySensor from '../views/ProjectPages/HumiditySensor.vue';
 import DriveFree from '../views/ProjectPages/DriveFree.vue';
-import LeapHand from '../views/ProjectPages/LeapHand.vue';
+import BetaGrasp from '../views/ProjectPages/BetaGrasp.vue';
+import CuriesJarvis from '../views/ProjectPages/CuriesJarvis.vue';
+import SkilledVLA from '../views/ProjectPages/SkilledVLA.vue';
+import CADSmith from '../views/ProjectPages/CADSmith.vue';
+import RocketSmith from '../views/ProjectPages/RocketSmith.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -97,9 +101,34 @@ const router = createRouter({
       component: DriveFree,
     },
     {
+      path: '/projects/skilled-vla',
+      name: 'skilled-vla',
+      component: SkilledVLA,
+    },
+    {
+      path: '/projects/betagrasp',
+      name: 'betagrasp',
+      component: BetaGrasp,
+    },
+    {
+      path: '/projects/curies-jarvis',
+      name: 'curies-jarvis',
+      component: CuriesJarvis,
+    },
+    {
+      path: '/projects/cadsmith',
+      name: 'cadsmith',
+      component: CADSmith,
+    },
+    {
+      path: '/projects/rocketsmith',
+      name: 'rocketsmith',
+      component: RocketSmith,
+    },
+    // Old LEAP Hand page now lives on as BetaGrasp
+    {
       path: '/projects/leap-hand',
-      name: 'leap-hand',
-      component: LeapHand,
+      redirect: '/projects/betagrasp',
     },
     // Fallback dynamic route for other projects
     {

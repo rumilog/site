@@ -6,40 +6,49 @@ import thumbnail3 from '../assets/thumbnail3.png';
 import thumbnail4 from '../assets/thumbnail4.jpg';
 import thumbnail5 from '../assets/thumbnail5.jpg';
 import thumbnail6 from '../assets/thumbnail6.png';
-import thumbnail8 from '../assets/thumbnail8.png';
-import thumbnail9 from '../assets/thumbnail9.png';
-import thumbnail10 from '../assets/thumbnail10.png';
-import thumbnail11 from '../assets/thumbnail11.png';
 import DriveFree1 from '../assets/driveFree1.jpg';
 import RumiPixel from '../assets/RumiPixel.png';
 import RumiPic from '../assets/aboutmepic.jpg';
-import LeapHandImg from '../assets/panda.jpg';
+import thumbSkilledVLA from '../assets/thumbSkilledVLA.jpg';
+import thumbBetaGrasp from '../assets/thumbBetaGrasp.jpg';
+import thumbJarvis from '../assets/thumbJarvis.jpg';
+import thumbCADSmith from '../assets/thumbCADSmith.jpg';
+import thumbRocketSmith from '../assets/thumbRocketSmith.jpg';
 import homeImage from '../assets/home image.png';
 import homeImage2 from '../assets/home image 2.png';
 import resumePDF from '../assets/resume/resume.pdf';
 import { ref } from 'vue';
+import fieldAILogo from '../assets/logo/fieldai-logo.svg';
+import tiktokLogo from '../assets/logo/tiktok-icon.png';
+import boozAllenLogo from '../assets/logo/booz-allen-logo.svg';
 
 const showPow = ref(false);
 
-const triggerPow = () => {
-  showPow.value = true;
-  setTimeout(() => showPow.value = false, 1000);
-};
+// kinds: any of 'paper' | 'internship' | 'project' (each gets a sticker)
+const projects = [
+  { title: 'SkilledVLA', img: thumbSkilledVLA, route: '/projects/skilled-vla', kinds: ['internship', 'paper'], status: 'Under Review', org: 'FieldAI', orgLogo: fieldAILogo, orgLogoBg: 'dark' },
+  { title: 'BetaGrasp', img: thumbBetaGrasp, route: '/projects/betagrasp', kinds: ['paper'], status: 'Preprint' },
+  { title: "Curie's Jarvis", img: thumbJarvis, route: '/projects/curies-jarvis', kinds: ['paper'], status: 'Preprint' },
+  { title: 'TikTok', img: thumbnail1, route: '/projects/tiktok-work', kinds: ['internship'], org: 'TikTok', orgLogo: tiktokLogo, orgLogoBg: 'dark' },
+  { title: 'CADSmith', img: thumbCADSmith, route: '/projects/cadsmith', kinds: ['paper'], status: 'Preprint' },
+  { title: 'RocketSmith', img: thumbRocketSmith, route: '/projects/rocketsmith', kinds: ['paper'], status: 'Preprint' },
+  { title: 'Drive-Free', img: DriveFree1, route: '/projects/drive-free', kinds: ['project'] },
+  { title: 'Research', img: thumbnail4, route: '/projects/research-lab', kinds: ['project'] },
+  { title: 'Booz Allen', img: thumbnail5, route: '/projects/booz-allen', kinds: ['internship'], org: 'Booz Allen', orgLogo: boozAllenLogo, orgLogoBg: 'light' },
+  { title: 'Adaptive', img: thumbnail2, route: '/projects/adaptive-mouse', kinds: ['project'] },
+  { title: 'Nautical', img: thumbnail3, route: '/projects/nautical-phrases', kinds: ['project'] },
+  { title: 'Audio', img: thumbnail6, route: '/projects/audio', kinds: ['project'] },
+];
 
-const copyEmail = () => {
-  navigator.clipboard.writeText("rumiqlog@gmail.com").then(() => {
-    alert("Email copied to clipboard!");
-  });
-};
 </script>
 
 <template>
   <main class="comic-page">
     <!-- Hero Panel -->
     <div class="hero-panel ink-border">
-      <router-link to="/projects/leap-hand" class="featured-aside">
+      <router-link to="/projects/skilled-vla" class="featured-aside">
         <span class="featured-aside-label">NEW!</span>
-        <span class="featured-aside-text">Watch Teleoperation<br />Demo →</span>
+        <span class="featured-aside-text">Watch SkilledVLA<br />Demo →</span>
       </router-link>
       <div class="hero-aside-images">
         <img :src="homeImage" alt="" class="hero-aside-image hero-aside-image-tilt-left" />
@@ -72,19 +81,20 @@ const copyEmail = () => {
     <span id="projects" class="scroll-anchor"></span>
     <section class="projects-section">
       <div class="section-label stencil-font">EPISODE #1: THE PORTFOLIO</div>
+
       <div class="projects-grid">
-        <ProjectBlock title="LEAP Hand" :imageSrc="LeapHandImg" route="/projects/leap-hand" />
-        <ProjectBlock title="TikTok" :imageSrc="thumbnail1" route="/projects/tiktok-work" />
-        <ProjectBlock title="Drive-Free" :imageSrc="DriveFree1" route="/projects/drive-free" />
-        <ProjectBlock title="Research" :imageSrc="thumbnail4" route="/projects/research-lab" />
-        <ProjectBlock title="Booz Allen" :imageSrc="thumbnail5" route="/projects/booz-allen" />
-        <ProjectBlock title="Adaptive" :imageSrc="thumbnail2" route="/projects/adaptive-mouse" />
-        <ProjectBlock title="Nautical" :imageSrc="thumbnail3" route="/projects/nautical-phrases" />
-        <ProjectBlock title="Audio" :imageSrc="thumbnail6" route="/projects/audio" />
-        <ProjectBlock title="Jokes" :imageSrc="thumbnail8" route="/projects/jokes" />
-        <ProjectBlock title="EcoMaps" :imageSrc="thumbnail9" route="/projects/eco-maps" />
-        <ProjectBlock title="Aquarium" :imageSrc="thumbnail10" route="/projects/smart-aquarium" />
-        <ProjectBlock title="VHDL Game" :imageSrc="thumbnail11" route="/projects/lateral-leap" />
+        <ProjectBlock
+          v-for="p in projects"
+          :key="p.route"
+          :title="p.title"
+          :imageSrc="p.img"
+          :route="p.route"
+          :kinds="p.kinds"
+          :status="p.status"
+          :org="p.org"
+          :orgLogo="p.orgLogo"
+          :orgLogoBg="p.orgLogoBg"
+        />
       </div>
     </section>
 
@@ -153,6 +163,7 @@ const copyEmail = () => {
     <footer class="footer">
       <p class="comic-button-font">TO BE CONTINUED...</p>
     </footer>
+
   </main>
 </template>
 

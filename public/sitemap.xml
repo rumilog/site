@@ -6,8 +6,28 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://rumiloghmani.com/projects/leap-hand</loc>
+    <loc>https://rumiloghmani.com/projects/skilled-vla</loc>
     <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://rumiloghmani.com/projects/betagrasp</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://rumiloghmani.com/projects/curies-jarvis</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://rumiloghmani.com/projects/cadsmith</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://rumiloghmani.com/projects/rocketsmith</loc>
+    <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>

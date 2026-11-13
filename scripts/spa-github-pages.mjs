@@ -35,6 +35,11 @@ const staticRoutes = [
   'projects/humidity-sensor',
   'projects/drive-free',
   'projects/leap-hand',
+  'projects/skilled-vla',
+  'projects/betagrasp',
+  'projects/curies-jarvis',
+  'projects/cadsmith',
+  'projects/rocketsmith',
 ]
 
 for (const route of staticRoutes) {
